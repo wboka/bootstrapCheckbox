@@ -1,15 +1,7 @@
-$(document).ready(function() {
-    $("div.bootstrapped-checkbox").bootstrapCheckbox("init");
-    
-    $("a").on("click", function() {
-        $("body").bootstrapCheckbox(this.id);
-    });
-});
-
 (function ($) {
     // Define available methods
     var methods = {
-		// Initialize checkboxes
+    	// Initialize checkboxes
         init: function () {
             return this.each(function () {
 				// Does the this parent element contain a "span.bootstrap-checkbox"
