@@ -1,4 +1,5 @@
 # Bootstrap Checkbox | 1.0.0
+[Visit the Demo](http://wboka.github.io/bootstrapCheckbox)
 ## General
 The SELECTOR should be an `input[type="checkbox"].bootstrapCheckbox` or a collection of `input[type="checkbox"].bootstrapCheckbox`s. Currently the class is hard-coded. (Sorry) 
 
