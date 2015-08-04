@@ -1,74 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap Checkbox plugin</title>
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    
-        <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    </head>
-    <body>
-        <div id="header_wrap" class="outer">
-            <header class="inner">
-                <a id="forkme_banner" href="https://github.com/wboka/bootstrapCheckbox">View on GitHub</a>
-    
-                <h1 id="project_title">bootstrapCheckbox</h1>
-                <h2 id="project_tagline"></h2>
-                
-                <section id="downloads">
-                    <a class="zip_download_link" href="https://github.com/wboka/bootstrapCheckbox/zipball/master">Download this project as a .zip file</a>
-                    <a class="tar_download_link" href="https://github.com/wboka/bootstrapCheckbox/tarball/master">Download this project as a tar.gz file</a>
-                </section>
-            </header>
-        </div>
-    
-        <div id="main_content_wrap" class="outer">
-            <section id="main_content" class="inner">
-                <h1>Bootstrap Checkbox plugin</h1>
-                
-                <h2>Documentation</h2>
-                <p>Coming Soon</p>
-                
-                <h2>Options</h2>
-                <ul>
-                    <li><a href="#demo" id="toggleAll">Toggle All</a></li>
-                    <li><a href="#demo" id="selectAll">Select All</a></li>
-                    <li><a href="#demo" id="deselectAll">Deselect All</a></li>
-                </ul>
-                
-                <h2>Demo</h2>
-                <div class="bootstrapped-checkbox">
-                    <span class="bootstrapCheckbox glyphicon glyphicon-unchecked"></span>
-                    <label>This is a unchecked <code>bootstrapCheckbox</code> by default</label>
-                </div>
-                <div class="bootstrapped-checkbox">
-                    <span class="bootstrapCheckbox glyphicon glyphicon-check"></span>
-                    <label>This is a checked <code>bootstrapCheckbox</code> by default</label>
-                </div>
-                <div class="bootstrapped-checkbox">
-                    <label>This is a <code>bootstrapCheckbox</code> inserted before a <code><label></code></label>
-                </div>
-                <div class="bootstrapped-checkbox">
-                    <p>This is a <code>bootstrapCheckbox</code> inserted before a <code><p></code></p>
-                </div>
-            </section>
-        </div>
-        
-        <div id="footer_wrap" class="outer">
-            <footer class="inner">
-                <p class="copyright">bootstrapCheckbox maintained by <a href="https://github.com/wboka">wboka</a></p>
-                <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-            </footer>
-        </div>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-        
-        <script src="bootstrapCheckbox.js"></script>
-        <script src="demo.js"></script>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bootstrap Checkbox plugin</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+		<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	</head>
+	<body>
+		<div id="header_wrap" class="outer">
+			<header class="inner">
+				<a id="forkme_banner" href="https://github.com/wboka/bootstrapCheckbox">View on GitHub</a>
+
+				<h1 id="project_title">bootstrapCheckbox</h1>
+				<h2 id="project_tagline"></h2>
+
+				<section id="downloads">
+					<a class="zip_download_link" href="https://github.com/wboka/bootstrapCheckbox/zipball/master">Download this project as a .zip file</a>
+					<a class="tar_download_link" href="https://github.com/wboka/bootstrapCheckbox/tarball/master">Download this project as a tar.gz file</a>
+				</section>
+			</header>
+		</div>
+
+		<div id="main_content_wrap" class="outer">
+			<section id="main_content" class="inner">
+				<h2>Documentation | 1.0.0</h2>
+				<h2>General</h2>
+
+				<p>The SELECTOR should be an <code>input[type="checkbox"].bootstrapCheckbox</code> or a collection of <code>input[type="checkbox"].bootstrapCheckbox</code>s. Currently the class is hard-coded. (Sorry) </p>
+
+				<h2>Methods</h2>
+
+				<h2>Init</h2>
+
+				<p>Setup: <code>$(SELECTOR).bootstrapCheckbox('init');</code></p>
+
+				<p>Notes: This adds a <code>glyphicon</code> to represent the checked status and hides the main checkbox. Also sets up a click listener to toggle the checked state of the SELECTOR.</p>
+
+				<h2>Toggle/ToggleAll</h2>
+
+				<p>Setup: <code>$(SELECTOR).bootstrapCheckbox('toggle');</code> or <code>$(SELECTOR).bootstrapCheckbox('toggleAll');</code></p>
+
+				<p>Notes: Switches the <code>glyphicon</code> from checked to unchecked and vice versa. Also, updates the hidden check box</p>
+
+				<h2>SelectAll</h2>
+
+				<p>Setup: <code>$(SELECTOR).bootstrapCheckbox('selectAll');</code></p>
+
+				<p>Notes: Switches the <code>glyphicon</code> to unchecked. Also, updates the hidden check box.</p>
+
+				<h2>DeselectAll</h2>
+
+				<p>Setup: <code>$(SELECTOR).bootstrapCheckbox('deselectAll');</code></p>
+
+				<p>Notes: Switches the <code>glyphicon</code> to checked. Also, updates the hidden check box.</p>
+
+				<h2>Destroy</h2>
+
+				<p>Setup: <code>$(SELECTOR).bootstrapCheckbox('destroy');</code></p>
+
+				<p>Notes: Shows the hidden checkbox, removes the click listener, and removes the <code>glyphicon</code> from the DOM</p>
+
+				<h2>Options</h2>
+				<div class="list-group">
+					<a href="#demo" id="toggleAll" class="list-group-item">Toggle All</a>
+					<a href="#demo" id="selectAll" class="list-group-item">Select All</a>
+					<a href="#demo" id="deselectAll" class="list-group-item">Deselect All</a>
+				</div>
+				<h2>Demo</h2>
+				<div>
+					<label>This is an unchecked <code>bootstrapCheckbox</code> by default</label>
+					<input type="checkbox" class="bootstrapCheckbox" />
+				</div>
+				<div>
+					<label>This is a checked <code>bootstrapCheckbox</code> by default</label>
+					<input type="checkbox" class="bootstrapCheckbox" checked />
+				</div>
+			</section>
+		</div>
+
+		<div id="footer_wrap" class="outer">
+			<footer class="inner">
+				<p class="copyright">bootstrapCheckbox maintained by <a href="https://github.com/wboka">Wayne Boka</a></p>
+				<p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+			</footer>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+		<script src="bootstrapCheckbox.js"></script>
+		<script src="demo.js"></script>
+	</body>
 </html>
