@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    $("div.bootstrapped-checkbox").bootstrapCheckbox("init");
-    
+    $("input.bootstrapCheckbox").bootstrapCheckbox("init");
+
     $("a").on("click", function() {
-        $("body").bootstrapCheckbox(this.id);
+        $("input.bootstrapCheckbox").bootstrapCheckbox(this.id);
     });
 });

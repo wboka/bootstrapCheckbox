@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap Checkbox plugin</title>
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    </head>
-    <body>
-        <div class="container">
-            <h2>Documentation</h2>
-            <p>Coming Soon</p>
-            <h2>Options</h2>
-            <ul>
-                <li><a href="#demo" id="toggleAll">Toggle All</a></li>
-                <li><a href="#demo" id="selectAll">Select All</a></li>
-                <li><a href="#demo" id="deselectAll">Deselect All</a></li>
-            </ul>
-            <h2>Demo</h2>
-            <div class="bootstrapped-checkbox">
-                <span class="bootstrapCheckbox glyphicon glyphicon-unchecked"></span>
-                <label>This is a unchecked <code>bootstrapCheckbox</code> by default</label>
-            </div>
-            <div class="bootstrapped-checkbox">
-                <span class="bootstrapCheckbox glyphicon glyphicon-check"></span>
-                <label>This is a checked <code>bootstrapCheckbox</code> by default</label>
-            </div>
-            <div class="bootstrapped-checkbox">
-                <label>This is a <code>bootstrapCheckbox</code> inserted before a <code><label></code></label>
-            </div>
-            <div class="bootstrapped-checkbox">
-                <p>This is a <code>bootstrapCheckbox</code> inserted before a <code><p></code></p>
-            </div>
-        </div>
-    
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-        
-        <script src="bootstrapCheckbox.js"></script>
-        <script src="demo.js"></script>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bootstrap Checkbox | 1.0.0</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<h2>Documentation</h2>
+			<p>Coming Soon</p>
+			<h2>Options</h2>
+			<div class="list-group">
+				<a href="#demo" id="toggleAll" class="list-group-item">Toggle All</a>
+				<a href="#demo" id="selectAll" class="list-group-item">Select All</a>
+				<a href="#demo" id="deselectAll" class="list-group-item">Deselect All</a>
+			</div>
+			<h2>Demo</h2>
+			<div>
+				<label>This is an unchecked <code>bootstrapCheckbox</code> by default</label>
+				<input type="checkbox" class="bootstrapCheckbox" />
+			</div>
+			<div>
+				<label>This is a checked <code>bootstrapCheckbox</code> by default</label>
+				<input type="checkbox" class="bootstrapCheckbox" checked />
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+		<script src="bootstrapCheckbox.js"></script>
+		<script src="demo.js"></script>
+	</body>
 </html>
