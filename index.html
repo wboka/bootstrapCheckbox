@@ -31,35 +31,47 @@
 				<h2>Documentation | 1.0.0</h2>
 				<h2>General</h2>
 
-				<p>The SELECTOR should be an <code>input[type="checkbox"].bootstrapCheckbox</code> or a collection of <code>input[type="checkbox"].bootstrapCheckbox</code>s. Currently the class is hard-coded. (Sorry) </p>
+				<p>The SELECTOR should be an <code>input[type="checkbox"].bootstrapCheckbox</code> or a collection of <code>input[type="checkbox"].bootstrapCheckbox</code>s.</p>
 
 				<h2>Methods</h2>
 
 				<h2>Init</h2>
+				<p><em>Version Added:</em> 1.0.0</p>
 
 				<p>Setup: <code>$(SELECTOR).bootstrapCheckbox('init');</code></p>
 
 				<p>Notes: This adds a <code>glyphicon</code> to represent the checked status and hides the main checkbox. Also sets up a click listener to toggle the checked state of the SELECTOR.</p>
 
 				<h2>Toggle/ToggleAll</h2>
+				<p><em>Version Added:</em> 1.0.0</p>
 
 				<p>Setup: <code>$(SELECTOR).bootstrapCheckbox('toggle');</code> or <code>$(SELECTOR).bootstrapCheckbox('toggleAll');</code></p>
 
 				<p>Notes: Switches the <code>glyphicon</code> from checked to unchecked and vice versa. Also, updates the hidden check box</p>
 
 				<h2>SelectAll</h2>
+				<p><em>Version Added:</em> 1.0.0</p>
 
 				<p>Setup: <code>$(SELECTOR).bootstrapCheckbox('selectAll');</code></p>
 
 				<p>Notes: Switches the <code>glyphicon</code> to unchecked. Also, updates the hidden check box.</p>
 
 				<h2>DeselectAll</h2>
+				<p><em>Version Added:</em> 1.0.0</p>
 
 				<p>Setup: <code>$(SELECTOR).bootstrapCheckbox('deselectAll');</code></p>
 
 				<p>Notes: Switches the <code>glyphicon</code> to checked. Also, updates the hidden check box.</p>
 
+				<h2>Refresh</h2>
+				<p><em>Version Added:</em> 1.1.0</p>
+
+				<p>Setup: <code>$(SELECTOR).bootstrapCheckbox('refresh');</code></p>
+
+				<p>Notes: Sets the <code>glyphicon</code> to checked/unchecked based on the hidden checkbox. This would be required if the hidden checkbox checked property/attribute has changed.</p>
+
 				<h2>Destroy</h2>
+				<p><em>Version Added:</em> 1.0.0</p>
 
 				<p>Setup: <code>$(SELECTOR).bootstrapCheckbox('destroy');</code></p>
 
