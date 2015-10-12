@@ -1,7 +1,7 @@
 /**
  *  @author 		Wayne T Boka
- *  @lastmodified 	201507291636
- *  @version		1.0.0
+ *  @lastmodified 	201510121011
+ *  @version		1.1.0
  *  @description	Plugin for Bootstrap styled checkboxes
  */
 
@@ -65,6 +65,14 @@
 			
 			return this;            
     	},
+    	refresh: function() {
+			// Set the bootstrapCheckbox(es) back to the current state of the underlying checkbox
+			return this.each(function() {
+				$bootstrapCheckbox = $(this).is("span.bootstrapCheckboxSpan") ? $(this) : $bootstrapCheckbox = $("span.bootstrapCheckboxSpan", $(this).parent());
+				
+				$bootstrapCheckbox.removeClass("glyphicon-check glyphicon-unchecked").addClass(($bootstrapCheckbox.siblings("input.bootstrapCheckbox").is(":checked")) ? "glyphicon-check" : "glyphicon-unchecked");
+			});
+		},
 		reset: function() {
 			// Set the bootstrapCheckbox(es) back to the unchecked state
 			return this.each(function() {
