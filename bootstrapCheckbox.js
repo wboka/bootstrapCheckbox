@@ -1,8 +1,9 @@
 /**
  *  @author 		Wayne T Boka
- *  @lastmodified 	201510121011
- *  @version		1.1.0
+ *  @lastmodified 	201510201605
+ *  @version		1.2.0
  *  @description	Plugin for Bootstrap styled checkboxes
+ *  @website		http://wboka.github.io/bootstrapCheckbox
  */
 
 (function ($) {
@@ -27,9 +28,11 @@
 			
 			$bootstrapCheckbox.toggleClass("glyphicon-check glyphicon-unchecked");
 			
-			$originalCheckbox = $(this).siblings("input.bootstrapCheckbox");
+			$originalCheckbox = $(this).siblings("input[type=checkbox]");
 			
 			$bootstrapCheckbox.hasClass("glyphicon-check") ? $originalCheckbox.prop("checked", true) : $originalCheckbox.removeProp("checked");
+			
+			$originalCheckbox.change();
 			
 			return this;
         },
@@ -40,9 +43,11 @@
 				
 				$bootstrapCheckbox.toggleClass("glyphicon-check glyphicon-unchecked");
 				
-				$originalCheckbox = $(this).siblings("input.bootstrapCheckbox");
+				$originalCheckbox = $(this).siblings("input[type=checkbox]");
 				
 				$bootstrapCheckbox.hasClass("glyphicon-check") ? $originalCheckbox.prop("checked", true) : $originalCheckbox.removeProp("checked");
+				
+				$originalCheckbox.change();
             });
         },
         selectAll: function () {
@@ -51,7 +56,7 @@
 			
 			$bootstrapCheckbox.removeClass("glyphicon-check glyphicon-unchecked").addClass("glyphicon-check");
 			
-			$(this).siblings("input.bootstrapCheckbox").prop("checked", true);
+			$(this).siblings("input[type=checkbox]").prop("checked", true).change();
 			
 			return this;            
         },
@@ -61,7 +66,7 @@
 			
 			$bootstrapCheckbox.removeClass("glyphicon-check glyphicon-unchecked").addClass("glyphicon-unchecked");
 			
-			$(this).siblings("input.bootstrapCheckbox").removeProp("checked");
+			$(this).siblings("input[type=checkbox]").removeProp("checked").change();
 			
 			return this;            
     	},
@@ -70,7 +75,7 @@
 			return this.each(function() {
 				$bootstrapCheckbox = $(this).is("span.bootstrapCheckboxSpan") ? $(this) : $bootstrapCheckbox = $("span.bootstrapCheckboxSpan", $(this).parent());
 				
-				$bootstrapCheckbox.removeClass("glyphicon-check glyphicon-unchecked").addClass(($bootstrapCheckbox.siblings("input.bootstrapCheckbox").is(":checked")) ? "glyphicon-check" : "glyphicon-unchecked");
+				$bootstrapCheckbox.removeClass("glyphicon-check glyphicon-unchecked").addClass(($bootstrapCheckbox.siblings("input[type=checkbox]").is(":checked")) ? "glyphicon-check" : "glyphicon-unchecked");
 			});
 		},
 		reset: function() {
@@ -80,7 +85,7 @@
 				
 				$bootstrapCheckbox.removeClass("glyphicon-check glyphicon-unchecked").addClass("glyphicon-unchecked");
 				
-				$(this).siblings("input.bootstrapCheckbox").removeProp("checked");
+				$(this).siblings("input[type=checkbox]").removeProp("checked").change();
 			});
 		},
 		destroy: function() {
@@ -102,3 +107,4 @@
         }
     };
 })(jQuery);
+
