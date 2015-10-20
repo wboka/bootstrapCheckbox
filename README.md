@@ -1,31 +1,51 @@
 # Bootstrap Checkbox | 1.2.0
 [Visit the Demo](http://wboka.github.io/bootstrapCheckbox)
-## General
-The SELECTOR should be an `input[type="checkbox"].bootstrapCheckbox` or a collection of `input[type="checkbox"].bootstrapCheckbox`s. Currently the class is hard-coded. (Sorry) 
 
-## Methods
+##General
+
+The SELECTOR should be a collection of ```input[type="checkbox"]```s.
+
+##Methods
 ----
-## Init
-Setup: `$(SELECTOR).bootstrapCheckbox('init');`
 
-Notes: This adds a `glyphicon` to represent the checked status and hides the main checkbox. Also sets up a click listener to toggle the checked state of the SELECTOR.
+##Init
+*Version Added:* 1.0.0
 
-## Toggle/ToggleAll
-Setup: `$(SELECTOR).bootstrapCheckbox('toggle');` or `$(SELECTOR).bootstrapCheckbox('toggleAll');`
+Setup: ``` $(SELECTOR).bootstrapCheckbox('init'); ```
 
-Notes: Switches the `glyphicon` from checked to unchecked and vice versa. Also, updates the hidden check box
+Notes: This adds a <code>glyphicon</code> to represent the checked status and hides the main checkbox. Also sets up a click listener to toggle the checked state of the SELECTOR.
 
-## SelectAll
-Setup: `$(SELECTOR).bootstrapCheckbox('selectAll');`
+##Toggle/ToggleAll
+*Version Added:* 1.0.0
 
-Notes: Switches the `glyphicon` to unchecked. Also, updates the hidden check box.
+Setup: ``` $(SELECTOR).bootstrapCheckbox('toggle'); ``` or ``` $(SELECTOR).bootstrapCheckbox('toggleAll'); ```
 
-## DeselectAll
-Setup: `$(SELECTOR).bootstrapCheckbox('deselectAll');`
+Notes: Switches the ```glyphicon``` from checked to unchecked and vice versa. Also, updates the hidden check box
 
-Notes: Switches the `glyphicon` to checked. Also, updates the hidden check box.
+##SelectAll
+*Version Added:* 1.0.0
 
-## Destroy
-Setup: `$(SELECTOR).bootstrapCheckbox('destroy');`
+Setup: ``` $(SELECTOR).bootstrapCheckbox('selectAll'); ```
 
-Notes: Shows the hidden checkbox, removes the click listener, and removes the `glyphicon` from the DOM
+Notes: Switches the ```glyphicon``` to unchecked. Also, updates the hidden check box.
+
+##DeselectAll
+*Version Added:* 1.0.0
+
+Setup: ``` $(SELECTOR).bootstrapCheckbox('deselectAll'); ```
+
+Notes: Switches the ```glyphicon``` to checked. Also, updates the hidden check box.
+
+##Refresh
+*Version Added:* 1.1.0
+
+Setup: ``` $(SELECTOR).bootstrapCheckbox('refresh');```
+
+Notes: Sets the ```glyphicon``` to checked/unchecked based on the hidden checkbox. This would be required if the hidden checkbox checked property/attribute has changed.
+
+##Destroy
+*Version Added:* 1.0.0
+
+Setup: ``` $(SELECTOR).bootstrapCheckbox('destroy');```
+
+Notes: Shows the hidden checkbox, removes the click listener, and removes the ```glyphicon``` from the DOM
