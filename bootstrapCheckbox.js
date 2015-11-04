@@ -19,10 +19,17 @@
 				
 				$(this).hide();
 				
-                $(this).siblings("span.bootstrapCheckboxSpan, label").on("click keyup", methods['toggle']);
+                $(this).siblings("span.bootstrapCheckboxSpan, label").on("click keydown", methods['toggle']);
             });
         },
-        toggle: function () {
+        toggle: function (e) {
+        	if ((e.which === 32 || e.which === 13) && e.type === 'keydown') {
+        		// Only prevent the spacebar & enter
+        		e.preventDefault();
+        	} else {
+        		return;
+        	}
+        	
 			// Toggle which bootstrap checkbox glyphicon is showing
 			$bootstrapCheckbox = $(this).is("span.bootstrapCheckboxSpan") ? $(this) : $bootstrapCheckbox = $("span.bootstrapCheckboxSpan", $(this).parent());
 			
