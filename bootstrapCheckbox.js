@@ -1,7 +1,7 @@
 /**
  *  @author 		Wayne T Boka
  *  @lastmodified 	201510201605
- *  @version		1.2.0
+ *  @version		1.2.1
  *  @description	Plugin for Bootstrap styled checkboxes
  *  @website		http://wboka.github.io/bootstrapCheckbox
  */
@@ -14,12 +14,12 @@
             return this.each(function () {
 				// Checked to unchecked and vice versa
 				if ($(this).siblings("span.bootstrapCheckboxSpan").length === 0) {
-					$(this).after("<span class='bootstrapCheckboxSpan glyphicon " + (this.checked ? "glyphicon-check" : "glyphicon-unchecked") + "'></span>");
+					$(this).after("<span tabindex='0' class='bootstrapCheckboxSpan glyphicon " + (this.checked ? "glyphicon-check" : "glyphicon-unchecked") + "'></span>");
 				}
 				
 				$(this).hide();
 				
-                $(this).siblings("span.bootstrapCheckboxSpan, label").on("click", methods['toggle']);
+                $(this).siblings("span.bootstrapCheckboxSpan, label").on("click keyup", methods['toggle']);
             });
         },
         toggle: function () {
@@ -107,4 +107,3 @@
         }
     };
 })(jQuery);
-
