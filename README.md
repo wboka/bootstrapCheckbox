@@ -1,4 +1,4 @@
-# Bootstrap Checkbox | 1.2.0
+# Bootstrap Checkbox | 1.2.1
 [Visit the Demo](http://wboka.github.io/bootstrapCheckbox)
 
 ##General
